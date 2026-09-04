@@ -49,3 +49,25 @@ INSERT INTO lojas(nome) VALUES('Bazar das Coisas');
 INSERT INTO lojas(nome) VALUES('Americanas');
 
 ```
+
+
+##  Insert na tabela lojas-produtos
+
+Esta e um tabela intermediária ( também conhecida como **tabela pivot**),
+ou seja ela se relaciona com outras duas tabelas: **produto**
+através de chaves estrangeiras.
+
+```sql
+   INSERT INTO lojas_produtos(loja_id, produto_id, estoque) VALUES 
+   (2, 1, 20);
+
+   INSERT INTO lojas_produtos(loja_id, produto_id, estoque) VALUES
+   (4, 2, 3);
+
+   INSERT INTO lojas_produtos(loja_id, produto_id, estoque) VALUES
+   (2, 3, 5);
+
+   INSERT INFO lojas_produtos(lojas_id, produto_id, estoque)VALUES
+   (1, 1,2);
+
+```
