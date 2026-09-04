@@ -36,8 +36,16 @@ INSERT INTO produtos(nome,descricao,preco,quantidade,fornecedor_id)
    ('Tv Led',
    'Tela de 50 polegadas 4K, 4 entradas HDMI e etc e tal',
     3420,12,1 --id fornecedor Eletrônico Tabajara
-   
    );
-   
+
+```
+
+##  Insert na tabela lojas
+
+```sql
+INSERT INTO lojas(nome) VALUES('Casas Bahia');
+INSERT INTO lojas(nome) VALUES('Shopping Zona Leste');
+INSERT INTO lojas(nome) VALUES('Bazar das Coisas');
+INSERT INTO lojas(nome) VALUES('Americanas');
 
 ```
