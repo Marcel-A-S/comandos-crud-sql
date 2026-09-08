@@ -69,5 +69,26 @@ através de chaves estrangeiras.
 
    INSERT INFO lojas_produtos(lojas_id, produto_id, estoque)VALUES
    (1, 1,2);
+```
 
+---
+
+## UPDATA na tabela fornecedores
+
+```sql
+   UPDATE fornecedores SET nome= 'Mundo dos Games'
+   WHERE id = 2; 
+```
+
+## UPDATA na tabela produto
+```sql
+        UPDATE produto SET preco = ,2999, quantidade = 5 WHERE id = 3
+```
+
+
+
+## UPDATA na tabela lojas_produto
+
+```sql
+   UPDATE lojas_produtos SET estoque = 4 WHERE lojas_id = 2 AND produtos_id = 1;
 ```
