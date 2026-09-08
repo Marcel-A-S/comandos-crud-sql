@@ -1,14 +1,40 @@
 ## insert tabela usuaria
 
+
+
+## UPDATA na tabela usuario
+```sql
+   UPDATE usuario SET nome= 'Alessandra'
+   WHERE id = 1; 
+```
+
+
+## UPDATE na tabela usuário de editor para admin.
+```sql
+   UPDATE usuario SET nome= 'admin'
+   WHERE id = 2; 
+```
+
+
+
 ```sql
 INSERT INTO usuario (nome, email, senha, tipo_usuario ) VALUES
-('Ana Silva', 'ana@email.com', '123abc', 'editor');
+('alessandra', 'alessandra@email.com', '123abc', 'editor');
 
 INSERT INTO usuario (nome, email, senha, tipo_usuario) VALUES('Bruno Souza', 'bruno@email.com', 'abc456', 'admin');
 
 INSERT INTO usuario (nome, email, senha, tipo_usuario) VALUES('Carla Mendes', 'carla@email.com', '789xyz', 'editor');
 
 ```
+
+
+
+## UPDATE na tabela categoria
+```sql
+   UPDATE categoria SET nome= 'artigos esportivos'
+   WHERE id = 3; 
+```
+
 
 
 ## insert tabela categoria
@@ -20,6 +46,22 @@ INSERT INTO categoria (nome) VALUES ('entretenimento');
 
 
 ## insert tabela noticia
+
+## UPDATE na tabela noticia
+```sql
+   UPDATE noticia SET titulo = 'sexta-feira 13'
+   WHERE id = 1; 
+```
+## UPDATE na tabela noticia
+```sql
+   UPDATE noticia SET destaque = 'nao'
+   WHERE id = 2; 
+```
+
+
+
+
+
 
 ```sql
 INSERT INTO noticia (titulo, resumo, texto_completo, nome_imagem, destaque, id_usuario, id_categoria) VALUES (
