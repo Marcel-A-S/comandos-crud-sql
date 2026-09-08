@@ -92,3 +92,15 @@ através de chaves estrangeiras.
 ```sql
    UPDATE lojas_produtos SET estoque = 4 WHERE lojas_id = 2 AND produtos_id = 1;
 ```
+
+-- SQL aceita operadores lógicos: AND (E), OR (OU), NOT (NÃO)
+
+
+## DELETE na tabela fornecedores
+
+```sql
+DELETE FROM fornecedores WHERE id = 5;
+
+
+
+```
