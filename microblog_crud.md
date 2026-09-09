@@ -58,9 +58,26 @@ INSERT INTO categoria (nome) VALUES ('entretenimento');
    WHERE id = 2; 
 ```
 
+## DELETE para excluir uma das noticias
 
+```sql
+DELETE FROM noticia WHERE id = 3;
 
+```
 
+## DELETE para excluir categoria não utilizada
+
+```sql
+DELETE FROM categoria WHERE id = 1;
+
+```
+
+## DELETE para excluindo um usuario 
+
+```sql
+DELETE FROM usuario WHERE id = 3;
+
+```
 
 
 ```sql
