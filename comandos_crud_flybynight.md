@@ -101,6 +101,6 @@ através de chaves estrangeiras.
 ```sql
 DELETE FROM fornecedores WHERE id = 5;
 
-
-
 ```
+
+
