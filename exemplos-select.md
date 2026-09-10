@@ -300,3 +300,33 @@ SELECT fornecedor_id, COUNT(*) AS total_produtos
 FROM produtos GROUP BY fornecedor_id
 HAVING total_produtos >=2;
 ```
+
+
+### Combinando WHERE, GROUP BY, HAVING e ORDER BY
+
+Objetivos:
+
+1. Considera produtos com qualidade maior que zero
+2. Agrupa por fornecedor
+3. Calcula a quantidade e preço médio de cada grupo
+4. Mantém apenas fornecedores com pelo menos dois produtos
+5. Ordena os grupos pelo preço médio
+
+
+```sql
+SELECT
+     fornecedor_id,
+     COUNT(*) AS total_produtos,
+     ROUND(AVG(PRECO), 2) AS preco_medio
+FROM produtos
+WHERE quantidade > 0
+GROUP BY fornecedor_id
+HAVING total_produtos >= 2
+ORDER BY preco_medio DESC;     
+```
+
+**Obs:** ao combinar estes recursos, a ordem deve ser:
+
+1. WHERE
+2. GROUP BY/HAVING
+3. ORDER BY
