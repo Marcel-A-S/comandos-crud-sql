@@ -282,7 +282,21 @@ FROM produtos GROUP BY fornecedor_id;
 
 
 ```sql
-SELECT fornecedor_id, AVG(preco) AS preco_medio
+SELECT fornecedor_id, ROUND(AVG(preco), 2) AS preco_medio
 FROM produtos GROUP BY fornecedor_id;
 ```
 
+### HAVING 
+
+`HAVING` permite filtrar os grupos criados pelo `GROUP BY`.
+
+**Obs:** para usar o HAVING **precisa ter** GROUP BY.
+
+Exemplo: mostrar somente os fornecedores que possuem pelo 
+menos dois produtos cadastrados.
+
+```sql
+SELECT fornecedor_id, COUNT(*) AS total_produtos
+FROM produtos GROUP BY fornecedor_id
+HAVING total_produtos >=2;
+```
