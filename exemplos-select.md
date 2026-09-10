@@ -249,6 +249,8 @@ SELECT MAX(preco) AS "maior_preco" FROM produtos;
 
 
 ### Combinando agregações
+**Atenção** não coloque espaço entre o nome da função e
+os parênteses!
 
 ```sql
 SELECT
@@ -257,5 +259,30 @@ SELECT
      MAX(preco) AS maior_preco,
      ROUND(AVG(preco), 2) AS preco_medio
 FROM produtos;
+```
+
+### Recursos de agrupamento
+
+`GROUP BY` reúne registros que possuem um determinado
+valor em comum.
+
+
+### Contando produtos do fornecedor
+
+
+Exemplo: descobrir quantos produtos existem em cada
+fornecedor.
+
+```sql
+SELECT fornecedor_id, COUNT(*) AS total_produto
+FROM produtos GROUP BY fornecedor_id;
+```
+
+### Determinando a média de preços por fornecedor
+
+
+```sql
+SELECT fornecedor_id, AVG(preco) AS preco_medio
+FROM produtos GROUP BY fornecedor_id;
 ```
 
