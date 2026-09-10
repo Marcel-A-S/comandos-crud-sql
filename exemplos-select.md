@@ -227,3 +227,22 @@ Calcular a média dos preços dos produtos:
 SELECT AVG(preco) AS "Média dos Preços" FROM produtos;
 
 ```
+
+### MIN
+
+Retornar o menor preço existente:
+
+```sql
+SELECT MIN(preco) AS "menor_preco" FROM produtos;
+
+```
+
+
+### MAX
+
+Retornar o maior preço existente:
+
+```sql
+SELECT MAX(preco) AS "maior_preco" FROM produtos;
+
+```
