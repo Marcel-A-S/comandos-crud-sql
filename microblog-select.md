@@ -80,3 +80,59 @@ SELECT * FROM noticia WHERE id_categoria = 2 OR destaque = 1;
 ```sql
 SELECT * FROM noticias WHERE titulo LIKE '%tecnologia%';
 ```
+
+13. Faça uma consulta utilizando `LIKE` para encontrar registros cujo texto comece com determinada letra ou palavra.
+
+```sql
+SELECT * FROM noticias WHERE titulo LIKE 'A%';
+```
+
+## 5 Ordenação
+
+14. Consulte as notícias organizando o resultado da `mais recente para a mais antiga.`
+
+```sql
+SELECT * FROM noticia ORDER BY data_publicacao DESC;
+```
+
+
+15. Escolha uma tabela e faça uma consulta ordenando seus registros em `ordem alfabética.``
+
+```sql
+SELECT * FROM usuario ORDER BY nome ASC;
+```
+
+## 6 Funções de agregação
+
+16. Utilize `COUNT()` para descobrir quantos usuários existem cadastrados.
+
+```sql
+SELECT COUNT(*) AS total_usuario FROM usuario;
+```
+
+17. Utilize `COUNT()` para descobrir quantas notícias existem cadastradas.
+
+```sql
+SELECT COUNT(*) AS total_noticia FROM noticia;
+```
+
+18. Utilize `MIN() e MAX()` sobre a data das notícias para descobrir a data da notícia mais antiga e da mais recente.`
+
+```sql
+SELECT 
+    MIN(data_publicacao) AS noticia_mais_antiga,
+    MAX(data_publicacao) AS noticia_mais_recente
+FROM noticia;
+```
+
+## 7 Desafio
+
+19. Crie uma consulta por conta própria combinando pelo menos três recursos estudados nesta aula.
+
+```sql
+SELECT titulo AS "titulo da noticia",
+       data_publicacao AS "data de publicação"
+FROM noticia
+WHERE titulo LIKE 'Brasil%'
+ORDER BY data_publicacao DESC;
+```
