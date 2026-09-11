@@ -4,7 +4,7 @@
 1. Consulte todos os dados de todos os `usuários` cadastrados.
 ```sql
 
-SELECT * FROM usuarios;
+SELECT * FROM usuario;
 ```
 2. Consulte apenas algumas informações dos usuários, como `nome `e `e-mail`
 
@@ -29,7 +29,7 @@ SELECT data_publicacao FROM noticias;
 ```sql
 SELECT 
     titulo AS "titulo da noticia",
-    data_publicacao AS "data de publicaao"
+    data_publicacao AS "publicacao no dia"
 FROM noticia;
 ```
 
@@ -44,7 +44,7 @@ SELECT * FROM usuario WHERE tipo_usuario = 'admin';
 7. Consulte somente as notícias que estejam marcadas como `destaque` (ou alguma informação equivalente existente no seu modelo).`
 
 ```sql
-SELECT * FROM noticia WHERE destaque = 1;
+SELECT * FROM noticia WHERE destaque = `sim`;
 ```
 
 8. Escolha uma `categoria` existente no seu banco e consulte as `notícias` pertencentes a ela utilizando seu identificador.
@@ -78,7 +78,11 @@ SELECT * FROM noticia WHERE id_categoria = 2 OR destaque = 1;
 12. Escolha uma palavra ou parte de uma palavra existente nos dados do seu banco e utilize `LIKE` para procurar registros que a contenham.
 
 ```sql
-SELECT * FROM noticias WHERE titulo LIKE '%tecnologia%';
+SELECT * FROM noticia WHERE 
+titulo LIKE '%tecnologia%' OR
+resumo LIKE '%tecnologia%' OR
+destaque LIKE  '%tecnologia%' OR
+nome_imagem LIKE '%tecnologia%';
 ```
 
 13. Faça uma consulta utilizando `LIKE` para encontrar registros cujo texto comece com determinada letra ou palavra.
@@ -96,7 +100,7 @@ SELECT * FROM noticia ORDER BY data_publicacao DESC;
 ```
 
 
-15. Escolha uma tabela e faça uma consulta ordenando seus registros em `ordem alfabética.``
+15. Escolha uma tabela e faça uma consulta ordenando seus registros em `em ordem alfabetica`
 
 ```sql
 SELECT * FROM usuario ORDER BY nome ASC;
